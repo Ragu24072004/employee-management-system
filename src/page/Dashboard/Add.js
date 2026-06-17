@@ -42,7 +42,7 @@ function Add({ employees, setEmployees, setIsAdding }) {
       date,
     };
 
-    addEmployee(newEmployee);
+   
 
     setIsAdding(false);
 
