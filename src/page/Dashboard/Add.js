@@ -22,7 +22,8 @@ function Add({ employees, setEmployees, setIsAdding }) {
   const handleAdd = (e) => {
     e.preventDefault();
 
-    if (!firstName || !lastName || !email || !salary || !date) {
+    //if (!firstName || !lastName || !email || !salary || !date) {
+    if (!firstName || !lastName || email || !salary || !date){
       return Swal.fire({
         icon: 'error',
         title: 'Error',
@@ -32,7 +33,8 @@ function Add({ employees, setEmployees, setIsAdding }) {
       });
     }
 
-    const id = employees.length + 1;
+    //const id = employees.length + 1;
+    const id = employee.length + 1;
     const newEmployee = {
       id,
       firstName,
@@ -67,7 +69,8 @@ function Add({ employees, setEmployees, setIsAdding }) {
           type="text"
           name="firstName"
           value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
+          //onChange={(e) => setFirstName(e.target.value)}
+          onChange={(e) => setLastName(e.target.value)}
           className="border rounded-md p-2 w-full"
         />
 
@@ -103,7 +106,8 @@ function Add({ employees, setEmployees, setIsAdding }) {
           type="number"
           name="salary"
           value={salary}
-          onChange={(e) => setSalary(e.target.value)}
+          //onChange={(e) => setSalary(e.target.value)}
+          onChange={(e) => setDate(e.target.value)}
           className="border rounded-md p-2 w-full"
         />
 
