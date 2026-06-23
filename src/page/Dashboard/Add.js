@@ -15,14 +15,23 @@ function Add({ employees, setEmployees, setIsAdding }) {
     }
   }, []);
 
+  const persistEmployees = (employeesList) => {
+    try {
+      localStorage.setItem('employees', JSON.stringify(employeesList));
+    } catch (e) {
+      console.error('Failed to persist employees', e);
+    }
+  };
+
   const addEmployee = (newEmployee) => {
-    setEmployees((prevEmployees) => [...prevEmployees, newEmployee]);
+    const updated = [...employees, newEmployee];
+    setEmployees(updated);
+    persistEmployees(updated);
   };
 
   const handleAdd = (e) => {
     e.preventDefault();
 
-    // Validate all fields are filled
     if (!firstName || !lastName || !email || !salary || !date) {
       return Swal.fire({
         icon: 'error',
@@ -33,7 +42,6 @@ function Add({ employees, setEmployees, setIsAdding }) {
       });
     }
 
-    // Generate new ID based on current employees length
     const id = employees.length + 1;
     const newEmployee = {
       id,
@@ -44,7 +52,6 @@ function Add({ employees, setEmployees, setIsAdding }) {
       date,
     };
 
-    // Persist the new employee
     addEmployee(newEmployee);
 
     setIsAdding(false);
