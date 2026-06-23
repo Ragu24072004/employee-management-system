@@ -67,7 +67,7 @@ function Add({ employees, setEmployees, setIsAdding }) {
 
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md">
-      <form onSubmit={handleAdd} className="space-y-4">
+      <form onSubmit={handleAdd} className="space-y-4" noValidate>
         <h1 className="text-2xl font-semibold mb-4">Add Employee</h1>
         <label htmlFor="firstName" className="block text-sm font-medium text-gray-600">
           First Name
