@@ -131,7 +131,13 @@ function Add({ employees, setEmployees, setIsAdding }) {
           <input
             type="button"
             value="Cancel"
-            onClick={() => setIsAdding(false)}
+            onClick={() => {
+  setFirstName('');
+  setLastName('');
+  setEmail('');
+  setSalary('');
+  setDate('');
+}}
             className="bg-gray-300 text-gray-600 rounded-md px-4 py-2 hover:bg-gray-400 cursor-pointer"
           />
         </div>
