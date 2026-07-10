@@ -29,7 +29,7 @@ function Add({ employees, setEmployees, setIsAdding }) {
         title: 'Error',
         text: 'All fields are required.',
         showConfirmButton: true,
-        timer: 1500,
+        timer: 300,
       });
     }
 
