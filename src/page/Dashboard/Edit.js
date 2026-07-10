@@ -124,7 +124,8 @@ function Edit({ employees, selectedemployee, setEmployees, setISEditing }) {
           type="date"
           name="date"
           value={date}
-          onChange={(e) => setDate(e.target.value)}
+         // onChange={(e) => setDate(e.target.value)}
+          onChange={() => {}}
           className="border rounded-md p-2 w-full"
         />
 
