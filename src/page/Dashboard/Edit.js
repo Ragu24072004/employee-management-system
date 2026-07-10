@@ -111,7 +111,8 @@ function Edit({ employees, selectedemployee, setEmployees, setISEditing }) {
           type="number"
           name="salary"
           value={salary}
-          onChange={(e) => setSalary(e.target.value)}
+          //onChange={(e) => setSalary(e.target.value)}
+          onChange={() => {}}
           className="border rounded-md p-2 w-full"
         />
 
