@@ -46,7 +46,7 @@ function Edit({ employees, selectedemployee, setEmployees, setISEditing }) {
 
     if (index !== -1) {
       updatedEmployees[index] = updatedEmployee;
-      setEmployees(updatedEmployees);
+     // setEmployees(updatedEmployees);
 
       Swal.fire({
         icon: 'success',
