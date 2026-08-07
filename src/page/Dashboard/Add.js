@@ -45,7 +45,7 @@ function Add({ employees, setEmployees, setIsAdding }) {
     };
 
     // Persist the new employee
-    //addEmployee(newEmployee);
+    addEmployee(newEmployee);
 
     setIsAdding(false);
 
